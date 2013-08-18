@@ -1,0 +1,29 @@
+﻿body{
+    margin:50px;
+}
+.containerCSharp {
+    width: 250px;
+    height: 75px;
+    color:black;
+    background-color:yellowgreen;
+    padding:3px;
+    font-size:18pt;
+}
+
+.containerJava {
+    width: 250px;
+    height: 75px;
+    color:black;
+    background-color:#23A396;
+    padding:3px;
+    font-size:18pt;
+}
+
+.containerOther{
+    width: 250px;
+    height: 75px;
+    color:black;
+    background-color:#B43150;
+    padding:3px;
+    font-size:18pt;
+}
