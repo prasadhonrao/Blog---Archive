@@ -14,6 +14,18 @@
     <script src="/js/default.js"></script>
 </head>
 <body>
-    <p>Content goes here</p>
+
+    <div id="articleListViewTemplate" 
+         data-win-control="WinJS.Binding.Template">
+        <div class="container">
+            <div class="top" data-win-bind="innerText:title"></div>
+            <div class="top" data-win-bind="innerText:pubDate"></div>
+        </div>
+    </div>
+
+    <div id="articleListView"
+        data-win-control="WinJS.UI.ListView"
+        data-win-options="{itemTemplate: select('#articleListViewTemplate')}">
+    </div>
 </body>
 </html>
