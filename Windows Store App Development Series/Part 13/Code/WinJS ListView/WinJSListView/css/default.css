@@ -1,0 +1,9 @@
+﻿body{
+    margin:50px;
+}
+.win-item, .container {
+    width: 250px;
+    height: 75px;
+    color:black;
+    padding:3px;
+}
