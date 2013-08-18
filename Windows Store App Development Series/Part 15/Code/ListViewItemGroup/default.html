@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ListViewItemGroup</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- ListViewItemGroup references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <div id="employeeTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="employee">
+            <span data-win-bind="innerText:name"></span>
+        </div>
+    </div>
+ 
+    <div id="employeeGroupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="employeeGroupHeader">
+            <h1 data-win-bind="innerText:expertise"></h1>
+        </div>
+    </div>
+    
+    <div data-win-control="WinJS.UI.ListView"
+        data-win-options="{
+            itemDataSource:Data.employees.dataSource,
+            itemTemplate:select('#employeeTemplate'),
+            groupDataSource:Data.employees.groups.dataSource,
+            groupHeaderTemplate:select('#employeeGroupHeaderTemplate'),
+            layout: {type: WinJS.UI.GridLayout}
+        }">
+    </div>
+</body>
+</html>

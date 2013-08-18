@@ -1,0 +1,18 @@
+﻿body{
+    margin:20px;
+    padding:5px;
+}
+.employee {
+    background-color: #00ff90;
+    border: black solid 1px;
+    color: black;
+    font-size:15pt;
+    height: 50px;
+    width: 200px;
+    padding:5px;
+}
+
+.employeeGroupHeader{
+    color:#ff6a00;
+    font-size:x-large;
+}
