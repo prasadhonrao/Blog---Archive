@@ -1,0 +1,31 @@
+﻿body {
+    margin: 50px;
+    font-size: 22pt;
+}
+
+.divContainer {
+    border-style: solid;
+    border-color: white;
+    padding: 20px;
+    width: 85%;
+    height:90%;
+}
+
+#InsertNewEmployeeDiv{
+    background-color:mediumseagreen;
+    color:black;
+}
+
+#SearchEmployeeDiv{
+    background-color:mediumseagreen;
+    color:black;
+}
+
+#SaveButton{
+    color:black;
+    border-color:black;
+}
+
+.userInput {
+    font-size: 22pt;
+}

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="">
+<head>
+    <meta charset="utf-8" />
+    <title>Data Binding Using AngularJS</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- AngularJSDataBinding references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+    <script src="js/angular.js"></script>
+</head>
+
+<body>
+    <div data-ng-controller="EmployeeController">
+        <div id="InsertNewEmployeeDiv" class="divContainer">
+            <label for="newEmployeeName">Name</label>
+            <input id="newEmployeeName" type="text" ng-model="newEmployee.name" />
+            <label for="newEmployeeCompany">Company</label>
+            <input id="newEmployeeCompany" type="text" ng-model="newEmployee.company" />
+            <button id="SaveButton" ng-click="addEmployee()" class="userInput">Save</button>
+        </div>
+        <br />
+
+        <div class="divContainer">
+            You are adding - {{newEmployee.name}} {{newEmployee.company}}
+        </div>
+        <br />
+
+        <div id="SearchEmployeeDiv" class="divContainer">
+            <label for="SearchEmployee">Search</label>
+            <input id="SearchEmployee" type="text" data-ng-model="input" class="userInput" />
+        </div>
+
+        <br />
+
+        <div id="EmployeeListDiv" class="divContainer">
+            <ol>
+                <li data-ng-repeat="person in Employees | filter:input">{{ person.name }} - {{person.company}} </li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
