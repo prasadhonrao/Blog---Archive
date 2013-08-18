@@ -1,0 +1,24 @@
+﻿body {
+    margin: 50px;
+}
+
+.container {
+    width: 250px;
+    height: 75px;
+    color: black;
+    background-color: white;
+    padding: 3px;
+}
+
+.top {
+    font-size: 30px;
+    font-weight:bold;
+}
+
+.bottom {
+    font-size: x-large;
+    background-color:lightgray;
+    font-style: italic;
+    text-align: center;
+    width: 99%;
+}

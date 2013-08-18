@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html ng-app="">
+<head>
+    <meta charset="utf-8" />
+    <title>WinJS ListView Binding Using AngularJS</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- AngularJSWinJSListViewBinding references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="js/angular.js"></script>
+    <script src="/js/default.js"></script>
+
+</head>
+<body ng-controller="EmployeeController">
+    <div id="employeesListViewTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="container">
+            <div class="top" data-win-bind="innerText:name"></div>
+            <div class="bottom" data-win-bind="innerText:company"></div>
+        </div>
+    </div>
+
+    <div id="employeesListView"
+        data-win-control="WinJS.UI.ListView"
+        data-win-options="{itemTemplate: select('#employeesListViewTemplate')}">
+    </div>
+
+    <div id="appBar" data-win-control="WinJS.UI.AppBar" data-win-options="">
+        <button
+            ng-click="addEmployee()"
+            data-win-control="WinJS.UI.AppBarCommand"
+            data-win-options="{id:'cmdAdd',label:'Add Employees',icon:'add',
+                section:'global',tooltip:'Add item'}">
+        </button>
+    </div>
+</body>
+</html>
