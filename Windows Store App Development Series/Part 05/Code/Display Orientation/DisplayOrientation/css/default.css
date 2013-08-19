@@ -1,14 +1,29 @@
 ﻿body {
+    font-size: xx-large;
+    text-align: center;
+    color: black;
 }
 
 @media screen and (-ms-view-state: fullscreen-landscape) {
+    body {
+        background-color: khaki;
+    }
 }
 
 @media screen and (-ms-view-state: filled) {
+    body {
+        background-color:lightgreen;
+    }
 }
 
 @media screen and (-ms-view-state: snapped) {
+    body {
+        background-color:lightcoral;
+    }
 }
 
 @media screen and (-ms-view-state: fullscreen-portrait) {
+    body {
+        background-color: lightblue;
+    }
 }

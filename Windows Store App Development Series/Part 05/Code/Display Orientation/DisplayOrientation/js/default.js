@@ -1,6 +1,4 @@
-﻿// For an introduction to the Blank template, see the following documentation:
-// http://go.microsoft.com/fwlink/?LinkId=232509
-(function () {
+﻿(function () {
     "use strict";
 
     WinJS.Binding.optimizeBindingReferences = true;
@@ -11,23 +9,47 @@
     app.onactivated = function (args) {
         if (args.detail.kind === activation.ActivationKind.launch) {
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
-                // TODO: This application has been newly launched. Initialize
-                // your application here.
             } else {
-                // TODO: This application has been reactivated from suspension.
-                // Restore application state here.
             }
             args.setPromise(WinJS.UI.processAll());
         }
     };
 
+    app.onready = function () {
+        var message = document.getElementById('message');
+        var display = Windows.Graphics.Display.DisplayProperties;
+        display.addEventListener('orientationchanged', onOrientationchanged);
+
+        onOrientationchanged();
+    }
+
+    function onOrientationchanged() {
+        switch (Windows.Graphics.Display.DisplayProperties.currentOrientation) {
+
+            case Windows.Graphics.Display.DisplayOrientations.landscape:
+                message.innerText = "Display Orientation - Landscape";
+                break;
+
+            case Windows.Graphics.Display.DisplayOrientations.portrait:
+                message.innerText = "Display Orientation - Portrait";
+                break;
+
+            case Windows.Graphics.Display.DisplayOrientations.landscapeFlipped:
+                message.innerText = "Display Orientation - Landscape (flipped)";
+                break;
+
+            case Windows.Graphics.Display.DisplayOrientations.portraitFlipped:
+                message.innerText = "Display Orientation - Portrait (flipped)";
+                break;
+
+            default:
+                message.innerText = "Unknown";
+                break;
+        }
+
+    }
+
     app.oncheckpoint = function (args) {
-        // TODO: This application is about to be suspended. Save any state
-        // that needs to persist across suspensions here. You might use the
-        // WinJS.Application.sessionState object, which is automatically
-        // saved and restored across suspension. If you need to complete an
-        // asynchronous operation before your application is suspended, call
-        // args.setPromise().
     };
 
     app.start();
