@@ -1,0 +1,23 @@
+﻿body {
+    font-size: x-large;
+}
+
+#containerDiv {
+    width: 50%;
+    margin: auto;
+    text-align:center;
+    color:black;
+    background-color:darkkhaki;
+}
+
+@media screen and (-ms-view-state: fullscreen-landscape) {
+}
+
+@media screen and (-ms-view-state: filled) {
+}
+
+@media screen and (-ms-view-state: snapped) {
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+}
