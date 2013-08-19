@@ -1,0 +1,39 @@
+﻿body {
+    color: black;
+    font-size: 1.5em;
+    width: 80%;
+    margin: 20px;
+}
+
+#containerDiv {
+    background-color: lightgray;
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#inputContainerDiv {
+    background-color: #51A351;
+    color:white;
+    width: 50%;
+    float: left;
+}
+
+#outputContainerDiv {
+    background-color: #51A351;
+    color:white;
+    width: 50%;
+    float: right;
+}
+
+h2 {
+    color:black;
+}
+
+h2, select, #submitButton {
+    font-size: x-large;
+}
+
+.header {
+    background-color: white;
+}
