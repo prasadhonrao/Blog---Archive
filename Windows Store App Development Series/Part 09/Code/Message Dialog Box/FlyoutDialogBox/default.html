@@ -14,6 +14,17 @@
     <script src="/js/default.js"></script>
 </head>
 <body>
-    <p>Content goes here</p>
+    <h2 class="header">Modal-less DialogBox Using Flyout Control Demo</h2>
+    <br />
+    <br />
+    <div id="contentDiv" class="header">Content to delete</div>
+    <div id="AppBar" data-win-control="WinJS.UI.AppBar">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'DeleteCommand', label:'Delete', icon:'delete', section:'selection'}"></button>
+    </div>
+
+    <div id="Flyout" data-win-control="WinJS.UI.Flyout" aria-label="Content Deletion?">
+        <h3>Do you want to delete the content?</h3>
+        <button id="OkButton">Ok</button>
+    </div>
 </body>
 </html>
