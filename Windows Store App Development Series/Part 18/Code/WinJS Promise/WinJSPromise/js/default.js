@@ -11,37 +11,38 @@
     app.onactivated = function (args) {
         if (args.detail.kind === activation.ActivationKind.launch) {
 
-            var requestUrl = "http://prasadhonrao.com/feed/";
+            var requestUrl = "http://PrasadHonrao.com/feed/";
 
-            WinJS.xhr({ url: requestUrl})
-                 .done(
-                    // Complete function
-                    function (response) {
-                        var items = response.responseXML.querySelectorAll("item");
+            var promise = WinJS.xhr({ url: requestUrl });
 
-                        for (var ctr = 0; ctr < items.length; ctr++) {
-                            var article = {};
-                            article.title = items[ctr].querySelector("title").textContent;
-                            var date = new Date(items[ctr].querySelector("pubDate").textContent).toDateString();
-                            article.pubDate = date;
-                            articlesList.push(article);
-                        }
+            promise.done(
+               // Complete function
+               function (response) {
+                   var items = response.responseXML.querySelectorAll("item");
 
-                        dataList = new WinJS.Binding.List(articlesList);
-                        var articleListView = document.getElementById('articleListView').winControl;
-                        articleListView.itemDataSource = dataList.dataSource;
-                    },
+                   for (var ctr = 0; ctr < items.length; ctr++) {
+                       var article = {};
+                       article.title = items[ctr].querySelector("title").textContent;
+                       var date = new Date(items[ctr].querySelector("pubDate").textContent).toDateString();
+                       article.pubDate = date;
+                       articlesList.push(article);
+                   }
 
-                    // Error function
-                    function (request) {
-                        var x = 0;
-                    },
+                   dataList = new WinJS.Binding.List(articlesList);
+                   var articleListView = document.getElementById('articleListView').winControl;
+                   articleListView.itemDataSource = dataList.dataSource;
+               },
 
-                    // Progress function
-                    function (request) {
-                        var x = 0;
-                    }
-                );
+               // Error function
+               function (response) {
+                   // handle error here...
+               },
+
+               // Progress function
+               function (response) {
+                   // progress implementation goes here...
+               }
+           );
 
             WinJS.UI.processAll();
         }

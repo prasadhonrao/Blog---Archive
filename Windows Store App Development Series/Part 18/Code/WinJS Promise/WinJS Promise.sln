@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "WinJSPromise", "WinJSPromise\WinJSPromise.jsproj", "{5CFE6810-A5B7-44B6-9E7A-C932CB0CB701}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptCallback", "JavaScriptCallback\JavaScriptCallback.csproj", "{FEA68ABA-066B-430C-9DF9-613AFEC6D640}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,16 @@ Global
 		{5CFE6810-A5B7-44B6-9E7A-C932CB0CB701}.Release|x86.ActiveCfg = Release|x86
 		{5CFE6810-A5B7-44B6-9E7A-C932CB0CB701}.Release|x86.Build.0 = Release|x86
 		{5CFE6810-A5B7-44B6-9E7A-C932CB0CB701}.Release|x86.Deploy.0 = Release|x86
+		{FEA68ABA-066B-430C-9DF9-613AFEC6D640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA68ABA-066B-430C-9DF9-613AFEC6D640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA68ABA-066B-430C-9DF9-613AFEC6D640}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{FEA68ABA-066B-430C-9DF9-613AFEC6D640}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FEA68ABA-066B-430C-9DF9-613AFEC6D640}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FEA68ABA-066B-430C-9DF9-613AFEC6D640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA68ABA-066B-430C-9DF9-613AFEC6D640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEA68ABA-066B-430C-9DF9-613AFEC6D640}.Release|ARM.ActiveCfg = Release|Any CPU
+		{FEA68ABA-066B-430C-9DF9-613AFEC6D640}.Release|x64.ActiveCfg = Release|Any CPU
+		{FEA68ABA-066B-430C-9DF9-613AFEC6D640}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

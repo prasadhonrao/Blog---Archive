@@ -1,10 +1,10 @@
 ﻿body {
-    background-color: whitesmoke;
+    background-color:white;
     margin:20px;
 }
 
 #articleListView {
-    height: 95%;
+    height: 100%;
     width: 95%;
 }
 
