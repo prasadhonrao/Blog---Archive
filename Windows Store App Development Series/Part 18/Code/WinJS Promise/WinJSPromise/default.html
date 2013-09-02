@@ -14,12 +14,11 @@
     <script src="/js/default.js"></script>
 </head>
 <body>
-
     <div id="articleListViewTemplate" 
          data-win-control="WinJS.Binding.Template">
-        <div class="container">
-            <div class="top" data-win-bind="innerText:title"></div>
-            <div class="top" data-win-bind="innerText:pubDate"></div>
+        <div class="itemContainer">
+            <div class="itemTitle" data-win-bind="innerText:title"></div><br />
+            <div class="itemPubDate" data-win-bind="innerText:pubDate"></div>
         </div>
     </div>
 

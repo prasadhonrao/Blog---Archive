@@ -1,4 +1,35 @@
 ﻿body {
+    background-color: whitesmoke;
+    margin:20px;
+}
+
+#articleListView {
+    height: 95%;
+    width: 95%;
+}
+
+.itemContainer {
+    /*background-color: #018396;*/
+    background-image:url(../images/bg-line-darkbrown.png);
+    width: 350px;
+    height: 125px;
+    color: #c5752a;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.win-container {
+    border-radius: 10px;
+}
+
+.itemTitle {
+    font-weight: 900;
+    color: white;
+}
+
+.itemPubDate {
+    font-style: italic;
 }
 
 @media screen and (-ms-view-state: fullscreen-landscape) {

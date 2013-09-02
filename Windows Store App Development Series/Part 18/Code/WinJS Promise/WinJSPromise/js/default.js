@@ -19,17 +19,12 @@
                     function (response) {
                         var items = response.responseXML.querySelectorAll("item");
 
-                        for (var n = 0; n < items.length; n++) {
+                        for (var ctr = 0; ctr < items.length; ctr++) {
                             var article = {};
-                            article.title = items[n].querySelector("title").textContent;
-                            article.pubDate = items[n].querySelector("pubDate").textContent;
+                            article.title = items[ctr].querySelector("title").textContent;
+                            var date = new Date(items[ctr].querySelector("pubDate").textContent).toDateString();
+                            article.pubDate = date;
                             articlesList.push(article);
-                            //var thumbs = items[n].querySelectorAll("thumbnail");
-                            //if (thumbs.length > 1) {
-                            //    article.thumbnail = thumbs[1].attributes.getNamedItem("url").textContent;
-                            //    article.content = items[n].textContent;
-                            //    articlesList.push(article);
-                            //}
                         }
 
                         dataList = new WinJS.Binding.List(articlesList);
@@ -51,11 +46,6 @@
             WinJS.UI.processAll();
         }
     };
-
-
-    app.onerror = function (args) {
-        var e = 0;
-    }
 
     app.start();
 })();
