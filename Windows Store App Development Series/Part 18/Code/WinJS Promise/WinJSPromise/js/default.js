@@ -11,9 +11,7 @@
     app.onactivated = function (args) {
         if (args.detail.kind === activation.ActivationKind.launch) {
 
-            var requestUrl = "http://PrasadHonrao.com/feed/";
-
-            var promise = WinJS.xhr({ url: requestUrl });
+            var promise = WinJS.xhr({ url: "http://channel9.msdn.com/Feeds/RSS" });
 
             promise.done(
                // Complete function

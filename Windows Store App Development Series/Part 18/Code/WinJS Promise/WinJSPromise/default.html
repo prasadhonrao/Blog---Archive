@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>WinJSPromise</title>
+    <title>WinJS Promise</title>
 
     <!-- WinJS references -->
     <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
@@ -14,10 +14,11 @@
     <script src="/js/default.js"></script>
 </head>
 <body>
-    <div id="articleListViewTemplate" 
-         data-win-control="WinJS.Binding.Template">
+    <div id="articleListViewTemplate"
+        data-win-control="WinJS.Binding.Template">
         <div class="itemContainer">
-            <div class="itemTitle" data-win-bind="innerText:title"></div><br />
+            <div class="itemTitle" data-win-bind="innerText:title"></div>
+            <br />
             <div class="itemPubDate" data-win-bind="innerText:pubDate"></div>
         </div>
     </div>
@@ -26,7 +27,5 @@
         data-win-control="WinJS.UI.ListView"
         data-win-options="{itemTemplate: select('#articleListViewTemplate')}">
     </div>
-
-    
 </body>
 </html>
