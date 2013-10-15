@@ -1,0 +1,44 @@
+﻿body {
+    background-color:white;
+    margin:20px;
+}
+
+#customerListView {
+    height: 100%;
+    width: 95%;
+}
+
+.itemContainer {
+    background-color: #dd1c6f;
+    width: 200px;
+    height: 70px;
+    color: black;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.win-container {
+    border-radius: 10px;
+}
+
+.itemTitle {
+    font-weight: 900;
+    color: white;
+}
+
+.itemPubDate {
+    font-style: italic;
+}
+
+@media screen and (-ms-view-state: fullscreen-landscape) {
+}
+
+@media screen and (-ms-view-state: filled) {
+}
+
+@media screen and (-ms-view-state: snapped) {
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+}
