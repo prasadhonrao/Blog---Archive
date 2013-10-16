@@ -9,7 +9,7 @@
     var dataList = [];
     var result;
 
-    function GetCustomerData(response) {
+    function SaveCustomerData(response) {
         result = response.responseXML;
     }
 
@@ -19,6 +19,9 @@
         for (var ctr = 0; ctr < items.length; ctr++) {
             var customer = {};
             customer.ContactName = items[ctr].querySelector("ContactName").textContent;
+            customer.Address = items[ctr].querySelector("Address").textContent;
+            customer.City = items[ctr].querySelector("City").textContent;
+            customer.PostalCode = items[ctr].querySelector("PostalCode").textContent;
             customer.Country = items[ctr].querySelector("Country").textContent;
             customerList.push(customer);
         }
@@ -31,11 +34,9 @@
     app.onactivated = function (args) {
         if (args.detail.kind === activation.ActivationKind.launch) {
 
-            var promise = WinJS.xhr({ url: "http://services.odata.org/V3/Northwind/Northwind.svc/Customers" });
-
-            promise.then(GetCustomerData)
-                   .done(DisplayCustomerData);
-
+            WinJS.xhr({ url: "http://services.odata.org/V3/Northwind/Northwind.svc/Customers" })
+                    .then(SaveCustomerData)
+                    .done(DisplayCustomerData);
 
             args.setPromise(WinJS.UI.processAll());
         }

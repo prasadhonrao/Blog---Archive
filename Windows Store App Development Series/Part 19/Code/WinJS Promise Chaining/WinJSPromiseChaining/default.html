@@ -18,7 +18,11 @@
         data-win-control="WinJS.Binding.Template">
         <div class="itemContainer">
             <div class="itemContactName" data-win-bind="innerText:ContactName"></div>
-            <br />
+            <div>
+                <span data-win-bind="innerText:Address"></span> <br>
+                <span data-win-bind="innerText:City"></span> <br>
+                <span data-win-bind="innerText:PostalCode"></span>
+            </div>
             <div class="itemCountry" data-win-bind="innerText:Country"></div>
         </div>
     </div>
