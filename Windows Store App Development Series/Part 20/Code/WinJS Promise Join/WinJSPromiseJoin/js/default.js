@@ -8,13 +8,24 @@
 
     app.onactivated = function (args) {
         if (args.detail.kind === activation.ActivationKind.launch) {
-            if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
-                // TODO: This application has been newly launched. Initialize
-                // your application here.
-            } else {
-                // TODO: This application has been reactivated from suspension.
-                // Restore application state here.
-            }
+
+            var customerPromise = WinJS.xhr({ url: "http://services.odata.org/V3/Northwind/Northwind.svc/Customers" });
+            var employeePromise = WinJS.xhr({ url: "http://services.odata.org/V3/Northwind/Northwind.svc/Employees" });
+
+            var promises = { customer: customerPromise , employee : employeePromise } ;
+
+            WinJS.Promise.join(promises).done(
+                function complete(xhr) {
+                    var x = 0;
+                },
+                function error(xhr) {
+                    var x = 0;
+                },
+                function progress(xhr) {
+                    var x = 0;
+                }
+           );
+
             args.setPromise(WinJS.UI.processAll());
         }
     };
