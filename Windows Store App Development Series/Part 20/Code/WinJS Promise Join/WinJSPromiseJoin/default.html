@@ -14,6 +14,23 @@
     <script src="/js/default.js"></script>
 </head>
 <body>
-    <p>Content goes here</p>
+    <div id="CustomerDataTemplate" data-win-control="WinJS.Binding.Template">
+        <div data-win-bind="innerText:ContactName"></div>
+    </div>
+
+    <div id="EmployeeDataTemplate" data-win-control="WinJS.Binding.Template">
+        <div data-win-bind="innerText:ContactName"></div>
+    </div>
+
+    <div id="ContainerDiv">
+        <div id="CustomerListView"
+            data-win-control="WinJS.UI.ListView"
+            data-win-options="{itemTemplate: select('#CustomerDataTemplate')}">
+        </div>
+        <div id="EmployeeListView" 
+            data-win-control="WinJS.UI.ListView"
+            data-win-options="{itemTemplate: select('#EmployeeDataTemplate')}">
+        </div>
+    </div>
 </body>
 </html>
