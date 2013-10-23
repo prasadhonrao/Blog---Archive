@@ -6,15 +6,15 @@
     var app = WinJS.Application;
     var activation = Windows.ApplicationModel.Activation;
     var customerList = [];
-    var employeeList = [];
+    var productList = [];
 
     app.onactivated = function (args) {
         if (args.detail.kind === activation.ActivationKind.launch) {
 
             var customerPromise = WinJS.xhr({ url: "http://services.odata.org/V3/Northwind/Northwind.svc/Customers" });
-            var employeePromise = WinJS.xhr({ url: "http://services.odata.org/V3/Northwind/Northwind.svc/Employees" });
+            var productPromise = WinJS.xhr({ url: "http://services.odata.org/V3/Northwind/Northwind.svc/Products" });
 
-            var promises = { customer: customerPromise , employee : employeePromise } ;
+            var promises = { customer: customerPromise , product : productPromise } ;
 
             WinJS.Promise.join(promises).done(
                 function complete(xhr) {
@@ -26,10 +26,6 @@
                         var customer = {};
 
                         customer.ContactName = items[ctr].querySelector("ContactName").textContent;
-                        customer.Address = items[ctr].querySelector("Address").textContent;
-                        customer.City = items[ctr].querySelector("City").textContent;
-                        customer.PostalCode = items[ctr].querySelector("PostalCode").textContent;
-                        customer.Country = items[ctr].querySelector("Country").textContent;
                         customerList.push(customer);
                     }
 
@@ -37,22 +33,19 @@
                     var customerListView = document.getElementById('CustomerListView').winControl;
                     customerListView.itemDataSource = customerDataList.dataSource;
 
-                    var employeeResult = xhr.employee.responseXML;
-                    var items = employeeResult.querySelectorAll("entry");
+                    var productResult = xhr.product.responseXML;
+                    var items = productResult.querySelectorAll("entry");
 
                     for (var ctr = 0; ctr < items.length; ctr++) {
-                        var employee = {};
-                        employee.ContactName = items[ctr].querySelector("FirstName").textContent;
-                        employee.Address = items[ctr].querySelector("Address").textContent;
-                        employee.City = items[ctr].querySelector("City").textContent;
-                        employee.PostalCode = items[ctr].querySelector("PostalCode").textContent;
-                        employee.Country = items[ctr].querySelector("Country").textContent;
-                        employeeList.push(employee);
+                        var product = {};
+                        product.ProductName = items[ctr].querySelector("ProductName").textContent;
+                        product.UnitPrice = items[ctr].querySelector("UnitPrice").textContent;
+                        productList.push(product);
                     }
 
-                    var employeeDataList = new WinJS.Binding.List(employeeList);
-                    var employeeListView = document.getElementById('EmployeeListView').winControl;
-                    employeeListView.itemDataSource = employeeDataList.dataSource;
+                    var productDataList = new WinJS.Binding.List(productList);
+                    var productListView = document.getElementById('ProductListView').winControl;
+                    productListView.itemDataSource = productDataList.dataSource;
                     
                 },
                 function error(xhr) {

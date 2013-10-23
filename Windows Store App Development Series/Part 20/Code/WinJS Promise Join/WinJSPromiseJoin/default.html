@@ -15,11 +15,14 @@
 </head>
 <body>
     <div id="CustomerDataTemplate" data-win-control="WinJS.Binding.Template">
-        <div data-win-bind="innerText:ContactName"></div>
+        <div class="CustomerItemContainer" data-win-bind="innerText:ContactName"></div>
     </div>
 
-    <div id="EmployeeDataTemplate" data-win-control="WinJS.Binding.Template">
-        <div data-win-bind="innerText:ContactName"></div>
+    <div id="ProductDataTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="ProductItemContainer">
+            <div data-win-bind="innerText:ProductName"></div>
+            <div data-win-bind="innerText:UnitPrice"></div>
+        </div>
     </div>
 
     <div id="ContainerDiv">
@@ -27,9 +30,9 @@
             data-win-control="WinJS.UI.ListView"
             data-win-options="{itemTemplate: select('#CustomerDataTemplate')}">
         </div>
-        <div id="EmployeeListView" 
+        <div id="ProductListView"
             data-win-control="WinJS.UI.ListView"
-            data-win-options="{itemTemplate: select('#EmployeeDataTemplate')}">
+            data-win-options="{itemTemplate: select('#ProductDataTemplate')}">
         </div>
     </div>
 </body>
