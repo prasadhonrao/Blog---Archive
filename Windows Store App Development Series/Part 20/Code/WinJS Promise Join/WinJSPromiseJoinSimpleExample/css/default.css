@@ -1,0 +1,14 @@
+﻿body {
+    background-color: #1570a6;
+    margin: 20px;
+    font-size:xx-large;
+    font-family:'Monotype Corsiva', 'Apple Chancery', 'ITC Zapf Chancery', 'URW Chancery L', cursive;
+}
+
+#ContainerDiv{
+    margin-top: 300px; 
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    width:80%;
+}
