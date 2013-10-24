@@ -13,23 +13,22 @@
             var websiteOutputDiv = document.getElementById('WebsiteOutputDiv');
 
             var promises = [];
+            promises[0] = WinJS.Promise.timeout(1000)
+                                       .then(function () {
+                                           nameOutputDiv.textContent = "Prasad Honrao";
+                                       });
 
-            promises[0] = WinJS.Promise.timeout(2000)
-                                      .then(function ()
-                                      {
-                                          nameOutputDiv.textContent = "Prasad Honrao";
-                                      });
-
-            promises[1] = WinJS.Promise.timeout(4000)
-                                      .then(function () {
-                                          websiteOutputDiv.textContent = "http://PrasadHonrao.com";
-                                      });
+            promises[1] = WinJS.Promise.timeout(2000)
+                                       .then(function () {
+                                           websiteOutputDiv.textContent = "Blog : http://PrasadHonrao.com";
+                                       });
 
             WinJS.Promise.join(promises).done(
-                function (promises)
-                {
-                    var containerDiv = document.getElementById('ContainerDiv');
-                    containerDiv.style.backgroundColor = "black";
+                function () {
+                    setTimeout(function () {
+                        var containerDiv = document.getElementById('ContainerDiv');
+                        containerDiv.style.border = "3px solid white";
+                    }, 1000);
                 }
             );
 

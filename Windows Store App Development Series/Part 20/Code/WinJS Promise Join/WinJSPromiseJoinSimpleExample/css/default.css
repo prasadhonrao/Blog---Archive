@@ -1,14 +1,26 @@
 ﻿body {
-    background-color: #1570a6;
+    background-image: url(../images/black-wallpaper-10.jpg);
     margin: 20px;
-    font-size:xx-large;
-    font-family:'Monotype Corsiva', 'Apple Chancery', 'ITC Zapf Chancery', 'URW Chancery L', cursive;
+    font-family: 'Segoe UI';
 }
 
-#ContainerDiv{
-    margin-top: 300px; 
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
-    width:80%;
+#ContainerDiv {
+    padding: 20px;
+    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 50%;
+}
+
+#NameOutputDiv {
+    background-color: yellow;
+    color: black;
+    font-size: 40px;
+}
+
+#WebsiteOutputDiv {
+    background-color: orange;
+    color: black;
+    font-size: 25px;
 }
