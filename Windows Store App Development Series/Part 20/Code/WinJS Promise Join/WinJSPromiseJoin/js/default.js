@@ -17,6 +17,7 @@
             var promises = { customer: customerPromise , product : productPromise } ;
 
             WinJS.Promise.join(promises).done(
+
                 function complete(xhr) {
 
                     var customerResult = xhr.customer.responseXML;

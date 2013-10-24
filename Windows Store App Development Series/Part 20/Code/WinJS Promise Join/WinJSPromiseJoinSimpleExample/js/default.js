@@ -13,12 +13,12 @@
             var websiteOutputDiv = document.getElementById('WebsiteOutputDiv');
 
             var promises = [];
-            promises[0] = WinJS.Promise.timeout(1000)
+            promises[0] = WinJS.Promise.timeout(3000)
                                        .then(function () {
                                            nameOutputDiv.textContent = "Prasad Honrao";
                                        });
 
-            promises[1] = WinJS.Promise.timeout(2000)
+            promises[1] = WinJS.Promise.timeout(6000)
                                        .then(function () {
                                            websiteOutputDiv.textContent = "Blog : http://PrasadHonrao.com";
                                        });
@@ -28,7 +28,7 @@
                     setTimeout(function () {
                         var containerDiv = document.getElementById('ContainerDiv');
                         containerDiv.style.border = "3px solid white";
-                    }, 1000);
+                    }, 3000);
                 }
             );
 

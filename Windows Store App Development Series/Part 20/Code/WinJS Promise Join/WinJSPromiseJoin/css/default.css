@@ -1,18 +1,19 @@
 ﻿body {
-    background-color: #1570a6;
+    /*background-color: #1570a6;*/
+    background-image: url(../images/black-wallpaper-10.jpg);
     margin: 20px;
 }
 
 #CustomerListView {
-    width:600px;
-    height:800px;
-    float:left;
+    width: 600px;
+    height: 800px;
+    float: left;
 }
 
-#ProductListView{
-    width:600px;
-    height:800px;
-    float:right;
+#ProductListView {
+    width: 600px;
+    height: 800px;
+    float: right;
 }
 
 .CustomerItemContainer {
@@ -24,7 +25,7 @@
     padding: 10px;
 }
 
-.ProductItemContainer{
+.ProductItemContainer {
     background-color: brown;
     width: 150px;
     height: 50px;
