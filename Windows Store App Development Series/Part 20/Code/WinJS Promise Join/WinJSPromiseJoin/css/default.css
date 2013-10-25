@@ -17,19 +17,21 @@
 }
 
 .CustomerItemContainer {
-    background-color: #ffba00!important;
+    background-color: #b6ded0;
     width: 150px;
     height: 50px;
     color: black;
     margin: 5px;
     padding: 10px;
+    border-radius:5px;
 }
 
 .ProductItemContainer {
-    background-color: brown;
+    background-color: #d5e08c;
     width: 150px;
     height: 50px;
-    color: white;
+    color: black;
     margin: 5px;
     padding: 10px;
+    border-radius:5px;
 }

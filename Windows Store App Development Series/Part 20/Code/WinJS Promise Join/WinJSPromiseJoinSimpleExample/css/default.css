@@ -1,7 +1,7 @@
 ﻿body {
     background-image: url(../images/black-wallpaper-10.jpg);
     margin: 20px;
-    font-family: 'Segoe UI';
+    font-family: 'Bookman Old Style', Bookman, 'URW Bookman L', 'Palatino Linotype', serif;
 }
 
 #ContainerDiv {
@@ -14,13 +14,13 @@
 }
 
 #NameOutputDiv {
-    background-color: yellow;
+    background-color: #b6ded0;
     color: black;
     font-size: 40px;
 }
 
 #WebsiteOutputDiv {
-    background-color: orange;
+    background-color: #d5e08c;
     color: black;
     font-size: 25px;
 }

@@ -20,14 +20,15 @@
 
             promises[1] = WinJS.Promise.timeout(6000)
                                        .then(function () {
-                                           websiteOutputDiv.textContent = "Blog : http://PrasadHonrao.com";
+                                           websiteOutputDiv.textContent = "http://PrasadHonrao.com";
                                        });
 
             WinJS.Promise.join(promises).done(
                 function () {
                     setTimeout(function () {
                         var containerDiv = document.getElementById('ContainerDiv');
-                        containerDiv.style.border = "3px solid white";
+                        containerDiv.style.border = "2px solid white";
+                        containerDiv.style.borderRadius = "10px";
                     }, 3000);
                 }
             );
