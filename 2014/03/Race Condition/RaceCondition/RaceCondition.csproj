@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="01ThreadsWithNoSharedVariable.cs" />
+    <None Include="04ThreadsWithStaticMethod.cs" />
+    <None Include="02ThreadsWithLocalVariable.cs" />
+    <None Include="03ThreadsWithInstanceMethod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
