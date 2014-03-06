@@ -41,11 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="01ThreadsWithNoSharedVariable.cs" />
+    <None Include="01ThreadsWithNoSharedVariable.cs" />
     <None Include="04ThreadsWithStaticMethod.cs" />
     <None Include="02ThreadsWithLocalVariable.cs" />
     <None Include="03ThreadsWithInstanceMethod.cs" />
     <None Include="05ThreadsWithLock.cs" />
+    <None Include="06TasksWithNoSharedVariable.cs" />
+    <None Include="07TasksWithLocalVariable.cs" />
+    <None Include="08TasksWithInstanceMethod.cs" />
+    <None Include="09TasksWithStaticMethod.cs" />
+    <Compile Include="10TasksWithLock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
