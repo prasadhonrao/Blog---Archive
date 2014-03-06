@@ -45,6 +45,7 @@
     <None Include="04ThreadsWithStaticMethod.cs" />
     <None Include="02ThreadsWithLocalVariable.cs" />
     <None Include="03ThreadsWithInstanceMethod.cs" />
+    <None Include="05ThreadsWithLock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
