@@ -111,31 +111,53 @@ namespace RaceCondition
         #endregion
 
         #region Mutex
+        //static void Main()
+        //{
+        //    // Naming a Mutex makes it available computer-wide. Use a name that's
+        //    // unique to your company and application (e.g., include your URL).
+        //    using (var mutex = new Mutex(false, "PSH"))
+        //    {
+        //        // Wait a few seconds if contended, in case another instance
+        //        // of the program is still in the process of shutting down.
+        //        if (!mutex.WaitOne())
+        //        {
+        //            Console.WriteLine("Another instance of the app is running. Bye!");
+        //            return;
+        //        }
+
+        //        RunProgram();
+        //    }
+
+        //    new Thread(RunProgram).Start();
+
+        //    Console.ReadLine();
+        //}
+        //static void RunProgram()
+        //{
+        //    Console.WriteLine("Running. Press Enter to exit");
+        //}
+        #endregion
+
+        #region Semaphore
+        // Nightclub example
+        static SemaphoreSlim _sem = new SemaphoreSlim(3); // Capacity of 3
+        
         static void Main()
         {
-            // Naming a Mutex makes it available computer-wide. Use a name that's
-            // unique to your company and application (e.g., include your URL).
-            using (var mutex = new Mutex(false, "PSH"))
-            {
-                // Wait a few seconds if contended, in case another instance
-                // of the program is still in the process of shutting down.
-                if (!mutex.WaitOne())
-                {
-                    Console.WriteLine("Another instance of the app is running. Bye!");
-                    return;
-                }
-
-                RunProgram();
-            }
-
-            new Thread(RunProgram).Start();
-
+            for (int i = 1; i <= 5; i++) new Thread(Enter).Start(i);
             Console.ReadLine();
         }
-        static void RunProgram()
+
+        static void Enter(object id)
         {
-            Console.WriteLine("Running. Press Enter to exit");
+            Console.WriteLine(id + " wants to enter");
+            _sem.Wait();
+            Console.WriteLine(id + " is in!"); // Only three threads
+            Thread.Sleep(2000 * (int)id); // can be here at
+            Console.WriteLine(id + " is leaving"); // a time.
+            _sem.Release();
         }
+
         #endregion
 
     }
