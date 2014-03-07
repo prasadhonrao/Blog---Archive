@@ -11,28 +11,67 @@ namespace RaceCondition
     {
         // Multiple threads accessing shared variable using static method
 
-        static bool isStarPrinted = false;
-        static object locker = new object();
-
+        #region Thread Join
         static void Main(string[] args)
         {
-            new Thread(PrintStar).Start();
+            var T1 = new Thread(PrintStar);
+            T1.Start();
 
-            PrintStar();
+            var T2 = new Thread(PrintPlus);
+            T2.Start();
+
+            T1.Join();
+            T2.Join();
+
+            // main thread will always execute after T1 and T2 completes its execution
+            Console.WriteLine("Ending main thread");
 
             Console.ReadLine();
+
         }
 
         static void PrintStar()
         {
-            lock (locker) // Thread safe code
+            for (int i = 0; i < 100; i++)
             {
-                if (!isStarPrinted)
-                {
-                    Console.WriteLine(" * ");
-                    isStarPrinted = true;
-                }
+                Console.Write(" * ");    
+            }
+            
+        }
+
+        static void PrintPlus()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                Console.Write(" + "); 
             }
         }
+        #endregion
+
+        #region Using Lock
+        //static bool isStarPrinted = false;
+        //static object locker = new object();
+
+        //static void Main(string[] args)
+        //{
+        //    new Thread(PrintStar).Start();
+        //    PrintStar();
+
+        //    Console.ReadLine();
+        //}
+
+        //static void PrintStar()
+        //{
+        //    lock (locker) // Thread safe code
+        //    {
+        //        if (!isStarPrinted)
+        //        {
+        //            Console.WriteLine(" * ");
+        //            isStarPrinted = true;
+        //        }
+        //    }
+        //} 
+        #endregion
+        
     }
 }
