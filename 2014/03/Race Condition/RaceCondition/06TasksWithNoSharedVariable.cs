@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace RaceCondition
@@ -14,27 +10,28 @@ namespace RaceCondition
         static void Main(string[] args)
         {
             Task.Factory.StartNew(PrintPlus);
-            PrintMinus();
-            Console.ReadLine();
-        }
-
-        private static void PrintMinus()
-        {
-            // Console.WriteLine("Thread Id = {0}", Thread.CurrentThread.ManagedThreadId);
+            Task.Factory.StartNew(PrintMinus);
             
-            for (int i = 0; i < 250; i++)
-            {
-                Console.Write(" - ");
-            }
+            //PrintMinus();
+            Console.ReadLine();
         }
 
         static void PrintPlus()
         {
             // Console.WriteLine("Thread Id = {0}", Thread.CurrentThread.ManagedThreadId);
 
-            for (int i = 0; i < 250; i++)
+            for (int i = 0; i < 100; i++)
             {
                 Console.Write(" + ");
+            }
+        }
+        private static void PrintMinus()
+        {
+            // Console.WriteLine("Thread Id = {0}", Thread.CurrentThread.ManagedThreadId);
+            
+            for (int i = 0; i < 100; i++)
+            {
+                Console.Write(" - ");
             }
         }
     }

@@ -45,8 +45,8 @@
     <None Include="04ThreadsWithStaticMethod.cs" />
     <None Include="02ThreadsWithLocalVariable.cs" />
     <None Include="03ThreadsWithInstanceMethod.cs" />
-    <Compile Include="05ThreadsWithLock.cs" />
-    <None Include="06TasksWithNoSharedVariable.cs" />
+    <None Include="05ThreadsWithLock.cs" />
+    <Compile Include="06TasksWithNoSharedVariable.cs" />
     <None Include="07TasksWithLocalVariable.cs" />
     <None Include="08TasksWithInstanceMethod.cs" />
     <None Include="09TasksWithStaticMethod.cs" />
