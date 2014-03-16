@@ -22,7 +22,7 @@ namespace RaceCondition
 
         static void PrintStar()
         {
-            for (int i = 0; i < 10; i++) // i varibale gets created on two different thread stack
+            for (int i = 0; i < 10; i++) // i variable gets created on two different thread stack
             {
                 Console.WriteLine(i + " * ");
             }
