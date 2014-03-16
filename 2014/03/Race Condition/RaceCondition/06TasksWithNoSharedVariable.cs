@@ -20,18 +20,20 @@ namespace RaceCondition
         {
             // Console.WriteLine("Thread Id = {0}", Thread.CurrentThread.ManagedThreadId);
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 50; i++)
             {
                 Console.Write(" + ");
+                Console.Write("\t");
             }
         }
         private static void PrintMinus()
         {
             // Console.WriteLine("Thread Id = {0}", Thread.CurrentThread.ManagedThreadId);
             
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 50; i++)
             {
                 Console.Write(" - ");
+                Console.Write("\t");
             }
         }
     }

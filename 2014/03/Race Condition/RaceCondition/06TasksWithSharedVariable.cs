@@ -22,9 +22,10 @@ namespace RaceCondition
         {
             // Console.WriteLine("Thread Id = {0}", Thread.CurrentThread.ManagedThreadId);
 
-            for (counter = 0; counter < 100; counter++)
+            for (counter = 0; counter < 50; counter++)
             {
                 Console.Write(" + ");
+                Console.Write("\t");
             }
         }
 
@@ -32,9 +33,10 @@ namespace RaceCondition
         {
             // Console.WriteLine("Thread Id = {0}", Thread.CurrentThread.ManagedThreadId);
 
-            for (counter = 0; counter < 100; counter++)
+            for (counter = 0; counter < 50; counter++)
             {
                 Console.Write(" - ");
+                Console.Write("\t");
             }
         }
     }

@@ -1,38 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace RaceCondition
 {
     class Program
     {
-        // Multiple task accessing shared variable using static method
-
-        static bool isStarPrinted = false;
-        static object locker = new object();
-
         static void Main(string[] args)
         {
-            Task.Factory.StartNew(PrintStar);
+            Task T1 = Task.Factory.StartNew(PrintPlus);
+            Task T2 = T1.ContinueWith(antacedent => PrintMinus());
 
-            Task.Factory.StartNew(PrintStar);
+            Task.WaitAll(new Task[] { T1, T2 });
+
+            Console.WriteLine("Ending main thread");
 
             Console.ReadLine();
         }
 
-        static void PrintStar()
+        static void PrintPlus()
         {
-            lock (locker) // Thread safe code
+            for (int i = 0; i < 50; i++)
             {
-                if (!isStarPrinted)
-                {
-                    Console.WriteLine(" * ");
-                    isStarPrinted = true;
-                }
+                Console.Write(" + ");
+                Console.Write("\t");
             }
+        }
+
+        static void PrintMinus()
+        {
+            for (int i = 0; i < 50; i++)
+            {
+                Console.Write(" - ");
+                Console.Write("\t");
+            }
+
         }
     }
 }
