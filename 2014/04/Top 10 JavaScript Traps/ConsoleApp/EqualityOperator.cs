@@ -42,4 +42,8 @@ namespace ConsoleApp
             Console.ReadLine();
         }
     }
+
+    class Employee
+    {
+    }
 }

@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Employee.cs" />
     <None Include="EqualityOperator.cs" />
     <Compile Include="ForEach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
