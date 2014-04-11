@@ -41,8 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SwitchStatement.cs" />
     <None Include="EqualityOperator.cs" />
-    <Compile Include="ForEach.cs" />
+    <None Include="ForEach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="VariableScope.cs" />
   </ItemGroup>
