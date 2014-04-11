@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    class Program
+    class EqualityOperator
     {
         static void Main(string[] args)
         {
