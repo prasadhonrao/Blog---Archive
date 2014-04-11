@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        // JavaScript does not support function overloading
+        function Add(num1, num2) {
+            console.log("Add function with 2 parameters");
+            return num1 + num2;
+        }
+
+        function Add(num1, num2, num3) {
+            console.log("Add function with 3 parameters");
+            if (num3 === undefined) {
+                console.log("num3 is undefined");
+                num3 = 0;
+            }
+            return num1 + num2 + num3;
+        }
+
+        var Add2 = Add(10, 20);
+        alert(Add2);
+        
+        var Add3 = Add(10, 20, 30);
+        alert(Add3);
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

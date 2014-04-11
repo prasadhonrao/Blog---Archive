@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+
+        var globalVariable = "Global";
+        
+        function Test() {
+            var localVariable = "Local";
+            window.alert(globalVariable);
+            window.alert(localVariable);
+            
+            if (1 > 0) {
+                var anotherLocalVariable = "Another Local Variable";
+                window.alert(anotherLocalVariable);
+            }
+
+            anotherLocalVariable = "New value for local variable";
+            window.alert(anotherLocalVariable);
+        }
+
+        // alert(localVarible);  // localVariable is not accessible outside Test function
+        // alert(anotherLocalVarible);  // anotherLocalVariable is not accessible outside Test function
+        
+        Test();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
