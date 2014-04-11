@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{89729D0A-B87C-4901-BC95-43F65D060F12}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{99B7F82E-0AA6-44D6-969D-090714171022}"
@@ -11,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		JSFor.html = JSFor.html
 		JSFunctionOverload.html = JSFunctionOverload.html
 		JSSwitchStatement.html = JSSwitchStatement.html
+		JSThis.html = JSThis.html
 		JSVariableScope.html = JSVariableScope.html
 	EndProjectSection
 EndProject
