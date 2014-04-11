@@ -41,12 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TruthyFalsy.cs" />
     <None Include="EqualityOperator.cs" />
     <None Include="ForEach.cs" />
     <None Include="FunctionOverload.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="SwitchStatement.cs" />
-    <Compile Include="ReturnStatement.cs" />
+    <None Include="ReturnStatement.cs" />
     <None Include="This.cs" />
     <None Include="VariableScope.cs" />
   </ItemGroup>
