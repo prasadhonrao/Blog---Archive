@@ -46,7 +46,8 @@
     <None Include="FunctionOverload.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="SwitchStatement.cs" />
-    <Compile Include="This.cs" />
+    <Compile Include="ReturnStatement.cs" />
+    <None Include="This.cs" />
     <None Include="VariableScope.cs" />
   </ItemGroup>
   <ItemGroup>
