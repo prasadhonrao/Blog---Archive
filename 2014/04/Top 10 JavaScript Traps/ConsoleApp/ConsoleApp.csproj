@@ -43,8 +43,9 @@
   <ItemGroup>
     <Compile Include="Employee.cs" />
     <None Include="EqualityOperator.cs" />
+    <Compile Include="ForEach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VariableScope.cs" />
+    <None Include="VariableScope.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
