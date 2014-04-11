@@ -60,6 +60,7 @@
     <Content Include="EqualityOperator.html" />
     <Content Include="ForEach.html" />
     <Content Include="FunctionOverload.html" />
+    <Content Include="Hoisting.html" />
     <Content Include="ReturnStatement.html" />
     <Content Include="SwitchStatement.html" />
     <Content Include="This.html" />
