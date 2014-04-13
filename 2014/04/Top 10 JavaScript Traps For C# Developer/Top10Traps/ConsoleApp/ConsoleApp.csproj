@@ -41,7 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Hoisting.cs" />
+    <None Include="Hoisting.cs" />
+    <Compile Include="Undefined.cs" />
     <None Include="TruthyFalsy.cs" />
     <None Include="EqualityOperator.cs" />
     <None Include="ForEach.cs" />
