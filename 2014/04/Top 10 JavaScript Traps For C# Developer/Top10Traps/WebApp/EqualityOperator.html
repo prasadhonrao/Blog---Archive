@@ -7,28 +7,53 @@
     <script type="text/javascript">
 
         // Equal
-        console.log('10 == 10 ? ' + (10 == 10));
-        console.log('10 == "10" ? ' + (10 == "10"));
-        console.log('10 == "20" ? ' + (10 == "20"));
-        console.log('"20" == "20" ? ' + ("20" == "20"));
 
+        // Same data type
+        console.log('10 == 10 ? ' + (10 == 10));
+        console.log('"10" == "10" ? ' + ("10" == "10"));
+        console.log('true == true" ? ' + (true == true));
+        
+        // Different data type
+        console.log('10 == "10" ? ' + (10 == "10"));
         console.log('1 == true ? ' + (1 == true));
         console.log('0 == false ? ' + (0 == false));
         console.log('0 == "" ? ' + (0 == ""));
         console.log('0 == " " ? ' + (0 == " "));
         console.log('"" == " " ? ' + ("" == " "));
 
+        // Reference type
+        var e1 = { name: 'Prasad' };
+        var e2 = { name: 'Prasad' };
+        var e3 = e1;
+        
+        console.log(e1 == e2);
+        console.log(e1 == e3);
+       
+
         // Strict Equal
-        console.log('10 === 10 ? ' + (10 === 10));
+        
+        // Same data type
+        console.log('10 == 10 ? ' + (10 == 10));
+        console.log('"10" == "10" ? ' + ("10" == "10"));
+        console.log('true == true" ? ' + (true == true));
+        
+        // Different data type
         console.log('10 === "10" ? ' + (10 === "10"));
         console.log('10 === "20" ? ' + (10 === "20"));
         console.log('"20" === "20" ? ' + ("20" === "20"));
-
         console.log('1 === true ? ' + (1 === true));
         console.log('0 === false ? ' + (0 === false));
         console.log('0 === "" ? ' + (0 === ""));
         console.log('0 === " " ? ' + (0 === " "));
         console.log('"" === " " ? ' + ("" === " "));
+        
+        // Reference Type
+        var c1 = { name: 'Prasad' };
+        var c2 = { name: 'Prasad' };
+        var c3 = c1;
+
+        console.log(c1 === c2);
+        console.log(c1 === c3);
 
     </script>
 </head>

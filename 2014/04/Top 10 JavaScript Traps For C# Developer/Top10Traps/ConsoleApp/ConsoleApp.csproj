@@ -42,9 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Hoisting.cs" />
-    <Compile Include="Undefined.cs" />
+    <None Include="Undefined.cs" />
     <None Include="TruthyFalsy.cs" />
-    <None Include="EqualityOperator.cs" />
+    <Compile Include="EqualityOperator.cs" />
     <None Include="ForEach.cs" />
     <None Include="FunctionOverload.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
