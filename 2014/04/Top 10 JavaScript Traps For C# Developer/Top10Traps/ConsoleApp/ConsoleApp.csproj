@@ -44,14 +44,14 @@
     <None Include="Hoisting.cs" />
     <None Include="Undefined.cs" />
     <None Include="TruthyFalsy.cs" />
-    <Compile Include="EqualityOperator.cs" />
+    <None Include="EqualityOperator.cs" />
     <None Include="ForEach.cs" />
     <None Include="FunctionOverload.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="SwitchStatement.cs" />
     <None Include="ReturnStatement.cs" />
     <None Include="This.cs" />
-    <None Include="VariableScope.cs" />
+    <Compile Include="VariableScope.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -5,26 +5,27 @@
     <title>JavaScript variable scope</title>
     <script type="text/javascript">
 
-        var globalVariable = "Global";
+        var favoriteCity = "London";
         
-        function Test() {
-            var localVariable = "Local";
-            console.log(globalVariable);
-            console.log(localVariable);
+        function PrintFavoriteCity() {
+            console.log(favoriteCity);
+
+            var favoriteIndianCity = "Pune";
+            console.log(favoriteIndianCity);
             
-            if (1 > 0) {
-                var anotherLocalVariable = "Another Local Variable";
-                console.log(anotherLocalVariable);
+            if (true) {
+                var welcomeMessage = "Hello dear traveler!";
+                console.log(welcomeMessage);
             }
 
-            anotherLocalVariable = "New value for local variable";
-            console.log(anotherLocalVariable);
+            welcomeMessage = "Hello dear traveler, welcome back! ";
+            console.log(welcomeMessage);
         }
 
-        // console.log(localVarible);  // localVariable is not accessible outside Test function
-        // console.log(anotherLocalVarible);  // anotherLocalVariable is not accessible outside Test function
+        //console.log(favoriteIndianCity);  // favoriteIndianCity is not accessible outside Test function
+        //console.log(welcomeMesage);  // welcomeMesage is not accessible outside Test function
         
-        Test();
+        PrintFavoriteCity();
 
     </script>
 </head>
