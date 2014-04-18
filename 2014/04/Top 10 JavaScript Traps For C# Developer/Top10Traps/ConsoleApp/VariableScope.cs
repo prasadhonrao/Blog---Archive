@@ -13,7 +13,7 @@ namespace ConsoleApp
         {
             Console.WriteLine("Your favorite city is {0}", favoriteCity);
             favoriteCity = "New York";
-            PrintFavoriteCity(favoriteCity);
+            PrintFavoriteCity();
 
             if (favoriteCity.Equals("New York"))
             {
