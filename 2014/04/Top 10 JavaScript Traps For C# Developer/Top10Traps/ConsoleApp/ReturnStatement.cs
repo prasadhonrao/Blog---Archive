@@ -12,9 +12,8 @@ namespace ConsoleApp
         {
             Console.WriteLine(Add(10, 20));
 
-            Console.WriteLine(DefaultEmployee().Name);
+            Console.WriteLine(GetDefaultCategory().Name);
             Console.ReadLine();
-
         }
 
         public static int Add(int num1, int num2)
@@ -22,19 +21,12 @@ namespace ConsoleApp
             return num1 + num2;
         }
 
-        public static Employee DefaultEmployee()
-        {
-            return new Employee
+        public static dynamic GetDefaultCategory(){
+            return 
+                new 
                     {
-                        Id = 1,
-                        Name = "Default"
+                        Name = "General"
                     };
         }
-    }
-
-    public class Employee
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
     }
 }
