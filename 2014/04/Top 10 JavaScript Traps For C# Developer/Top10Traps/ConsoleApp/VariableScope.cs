@@ -8,19 +8,25 @@ namespace ConsoleApp
 {
     class VariableScope
     {
-        private static string message = "Class level variable";
-        static void Main(string[] args)
+        private static string favoriteCity = "London";
+        static void Main()
         {
-            message = "Override message";
-            Console.WriteLine(message);
+            Console.WriteLine("Your favorite city is {0}", favoriteCity);
+            favoriteCity = "New York";
+            PrintFavoriteCity();
 
-            if (1 > 0)
+            if (favoriteCity.Equals("New York"))
             {
-                var newMessage = "This is a new message";
-                Console.WriteLine(newMessage);
+                var welcomeMessage = "Welcome New Yorker";
+                Console.WriteLine(welcomeMessage);
             }
 
             Console.ReadLine();
+        }
+
+        static void PrintFavoriteCity()
+        {
+            Console.WriteLine("Your favorite city is {0}", favoriteCity);
         }
     }
 }

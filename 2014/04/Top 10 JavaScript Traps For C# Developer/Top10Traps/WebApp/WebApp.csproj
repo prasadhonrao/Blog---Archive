@@ -65,6 +65,7 @@
     <Content Include="SwitchStatement.html" />
     <Content Include="This.html" />
     <Content Include="TruthyFalsy.html" />
+    <Content Include="Undefined.html" />
     <Content Include="VariableScope.html" />
     <Content Include="Web.config" />
   </ItemGroup>

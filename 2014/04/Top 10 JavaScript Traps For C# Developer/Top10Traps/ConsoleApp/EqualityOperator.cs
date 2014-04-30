@@ -1,43 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
     class EqualityOperator
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            #region Equality
-            var firstNumber = 10;
-            var secondNumber = 10;
-            var thirdNumber = 20;
-            var equalNumbers = firstNumber == secondNumber;
-            var notEqualNumbers = firstNumber != thirdNumber;
-            Console.WriteLine("10 == 10 ? " + equalNumbers);
-            Console.WriteLine("10 != 20 ? " + notEqualNumbers);
+            // Value Type
+            Console.WriteLine("10 == 10 ? " + (10 == 10)); // returns true
+            Console.WriteLine("10 != 10 ? " + (10 != 10)); // returns false.
+            Console.WriteLine("10 != 20 ? " + (10 != 20)); // returns true. 
 
-            var firstString = "Hello";
-            var secondString = "World";
-            var equalStrings = firstString == secondString;
-            Console.WriteLine("Hello == World ? " + equalStrings);
-
-            var thirdString = string.Copy(firstString);
-            equalStrings = firstString == thirdString;
-            Console.WriteLine("Hello == Hello ? " + equalStrings);
-
+            // Reference Type
             var emp1 = new Employee();
             var emp2 = new Employee();
-            var sameEmployee = emp1 == emp2;
-            Console.WriteLine("emp1 == emp2 ? " + sameEmployee);
+            Console.WriteLine("emp1 == emp2 ? " + (emp1 == emp2)); // returns false
 
             emp1 = emp2;
-            sameEmployee = emp1 == emp2;
-            Console.WriteLine("emp1 == emp2 ? " + sameEmployee); 
-            #endregion
+            Console.WriteLine("emp1 == emp2 ? " + (emp1 == emp2));
+
+
+            // Strings
+            Console.WriteLine("A == B ? " + ("A" == "B"));
+            var temp = string.Copy("A");
+            Console.WriteLine("A == A ? " + ("A" == temp));
 
             Console.ReadLine();
         }

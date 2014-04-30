@@ -3,30 +3,57 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>JavaScript Equality Operators</title>
     <script type="text/javascript">
 
-        //alert('10 == 10 ? ' + (10 == 10));
-        //alert('10 == "10" ? ' + (10 == "10"));
-        //alert('10 == "20" ? ' + (10 == "20"));
-        //alert('"20" == "20" ? ' + ("20" == "20"));
+        // Equal
 
-        //alert('1 == true ? ' + (1 == true));
-        //alert('0 == false ? ' + (0 == false));
-        //alert('0 == "" ? ' + (0 == ""));
-        //alert('0 == " " ? ' + (0 == " "));
-        //alert('"" == " " ? ' + ("" == " "));
+        // Same data type
+        console.log('10 == 10 ? ' + (10 == 10));
+        console.log('"10" == "10" ? ' + ("10" == "10"));
+        console.log('true == true" ? ' + (true == true));
+        
+        // Different data type
+        console.log('10 == "10" ? ' + (10 == "10"));
+        console.log('1 == true ? ' + (1 == true));
+        console.log('0 == false ? ' + (0 == false));
+        console.log('0 == "" ? ' + (0 == ""));
+        console.log('0 == " " ? ' + (0 == " "));
+        console.log('"" == " " ? ' + ("" == " "));
 
-        //alert('10 === 10 ? ' + (10 === 10));
-        //alert('10 === "10" ? ' + (10 === "10"));
-        //alert('10 === "20" ? ' + (10 === "20"));
-        //alert('"20" === "20" ? ' + ("20" === "20"));
+        // Reference type
+        var e1 = { name: 'Prasad' };
+        var e2 = { name: 'Prasad' };
+        var e3 = e1;
+        
+        console.log(e1 == e2);
+        console.log(e1 == e3);
+       
 
-        alert('1 === true ? ' + (1 === true));
-        alert('0 === false ? ' + (0 === false));
-        alert('0 === "" ? ' + (0 === ""));
-        alert('0 === " " ? ' + (0 === " "));
-        alert('"" === " " ? ' + ("" === " "));
+        // Strict Equal
+        
+        // Same data type
+        console.log('10 == 10 ? ' + (10 == 10));
+        console.log('"10" == "10" ? ' + ("10" == "10"));
+        console.log('true == true" ? ' + (true == true));
+        
+        // Different data type
+        console.log('10 === "10" ? ' + (10 === "10"));
+        console.log('10 === "20" ? ' + (10 === "20"));
+        console.log('"20" === "20" ? ' + ("20" === "20"));
+        console.log('1 === true ? ' + (1 === true));
+        console.log('0 === false ? ' + (0 === false));
+        console.log('0 === "" ? ' + (0 === ""));
+        console.log('0 === " " ? ' + (0 === " "));
+        console.log('"" === " " ? ' + ("" === " "));
+        
+        // Reference Type
+        var c1 = { name: 'Prasad' };
+        var c2 = { name: 'Prasad' };
+        var c3 = c1;
+
+        console.log(c1 === c2);
+        console.log(c1 === c3);
 
     </script>
 </head>

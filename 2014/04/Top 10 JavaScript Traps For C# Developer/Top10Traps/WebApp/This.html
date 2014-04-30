@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>JavaScript this keyword</title>
 
     <script type="text/javascript">
 
@@ -14,9 +14,10 @@
         this.X = 99;
         console.log(this.X);
 
-        this.Print = function () {
+        this.Print = function() {
             console.log("In print");
-        }
+        };
+        
         console.log(this.Print); // return function definition
 
         Print(); // this will actually print the message
