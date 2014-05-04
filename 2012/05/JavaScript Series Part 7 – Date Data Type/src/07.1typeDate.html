@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="author" content="Prasad Honrao" />
+    <meta name="description" content="JavaScript date type" />
+    <meta name="keywords" content="JavaScript, Types, date" />
+    <meta charset="utf-8" />
+    <title>JavaScript date type</title>
+    <script type="text/javascript">
+        function write(message) {
+            document.getElementById('message').innerHTML += message + '</br>';
+        }
+    </script>
+</head>
+<body>
+    <p id="message">
+        <script type="text/javascript">
+            // Date Variable declaration - default to today's date
+            var birthDate = new Date();
+            write(birthDate);
+            write("Type of birthDate Variable is " + typeof (birthDate));
+
+            // Date Variable declaration - default to date value specified
+            var birthDate = new Date(1980, 0, 1);
+            write(birthDate);
+
+            // Date Variable declaration - default to date value specified
+            birthDate = new Date("January 01 1980");
+            write(birthDate);
+
+            // Date Variable declaration - default to date and time value
+            var birthDate = new Date(1980, 0, 1, 15, 30, 45);
+            write(birthDate);
+
+            // Date Variable declaration - default to date and time value
+            var birthDate = new Date();
+            birthDate = new Date("August 01, 1979 11:12:13");
+            write(birthDate);
+
+            // Date Comparison
+            var firstDate = new Date(2012, 09, 15);
+            var today = new Date();
+            if (today === firstDate) {
+                write("Eq");
+            }
+            else {
+                write("Today is before 12 Nov 2012");
+            }
+
+            //Date Subtraction
+            var from = new Date();
+            for (var i = 1; i <= 1000; i++) {
+                var result = Math.pow(i, 2);
+                write(i + ":" + result);
+            }
+            var to = new Date();
+            var elapsed = to - from;
+            write("Took " + elapsed + " milliseconds to calculate square of 1000 numbers");
+
+            
+            // Date function
+            var someDate = new Date();
+            
+            // get
+            write(someDate.getDate());
+            write(someDate.getMonth());
+            write(someDate.getHours());
+            write(someDate.getFullYear());
+
+            //set
+            someDate.setDate(20);
+            someDate.setMonth(05);
+            someDate.setYear(1999);
+            write(someDate);
+
+        </script>
+</body>
+</html>

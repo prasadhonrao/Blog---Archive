@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="author" content="Prasad Honrao" />
+    <meta name="description" content="JavaScript Array Object" />
+    <meta name="keywords" content="JavaScript, Types, Array" />
+    <meta charset="utf-8" />
+    <title>JavaScript array type</title>
+    <script type="text/javascript">
+        function write(message) {
+            document.getElementById('message').innerHTML += message + '</br>';
+        }
+    </script>
+</head>
+<body>
+    <p id="message">
+        <script type="text/javascript">
+
+            // Empty array
+            var empty = [];
+            write('empty array length is ' + empty.length);
+
+            // Array declaration and initialization
+            write("Numeric Array");
+            var numbers = [1, 2, 3, 4, 5];
+            write(numbers);
+
+            // Array declaration and adding value separately
+            var colors = [];
+            colors[0] = "Red";
+            colors[1] = "Orange";
+            colors[2] = "Yellow";
+            write('colors array length- ' + colors.length);
+            write(colors);
+            
+            // string array
+            write("String Array");
+            var letters = ['a', 'q', 'z', 'd', 'm', 'p'];
+            write(letters);
+
+            // alphanumeric array
+            write("Alphanumeric Array");
+            var alpha = ['1', '2', 'c', 'd', '%'];
+            write(alpha);
+
+            // ARRAY FUNCTIONS
+
+            // push
+            write("Array functions");
+            var numbers = [1, 2, 3, 4, 5];
+            numbers.push(6);
+            numbers.push('$');
+            write(numbers);
+
+            // pop - this will take out '$' from number array
+            var numbers = [1, 2, 3, 4, 5];
+            var lastnumber = numbers.pop();
+            write(lastnumber);
+
+            // shift - remove from beginning
+            write("Array shift");
+            var numbers = [1, 2, 3, 4, 5];
+            alert('numbers array length- ' + numbers.length);
+            var firstElement = numbers.shift();
+            alert('numbers array length- ' + numbers.length);
+            alert(firstElement);
+
+            // unshift - add to beginning
+            write("Array unshift");
+            var numbers = [1, 2, 3, 4, 5];
+            alert('numbers array length- ' + numbers.length);
+            var lastElement = numbers.unshift(0);
+            alert('numbers array length- ' + numbers.length);
+
+            //reverse
+            write("Array reverse");
+            var numbers = [1, 2, 3, 4, 5];
+            var reverseNumbers = numbers.reverse();
+            write(reverseNumbers);
+
+            //slice(start,end) - copies part of an array
+            write("Array slice");
+            var numbers = [1, 2, 3, 4, 5];
+            var numberSlice = numbers.slice(0,3);
+            alert(numberSlice);
+
+            //splice(start,count); - takes parts of an array
+            write("Array splice");
+            var numbers = [1, 2, 3, 4, 5];
+            var numberSplice = numbers.splice(0, 3);
+            write(numberSplice);
+            write(numbers);
+
+            //sort - by default its string sort
+            write("Array sort");
+            var companies = ['Microsoft','Cognizant','Apple','Google','Samsung'];
+            alert(companies.sort());
+        </script>
+</body>
+</html>

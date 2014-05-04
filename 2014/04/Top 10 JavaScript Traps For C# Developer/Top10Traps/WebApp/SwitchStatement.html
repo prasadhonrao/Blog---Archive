@@ -10,8 +10,11 @@
             case input > "10" && input < 20:
                 console.log('Take Milk');
                 break;
-            case input > "21" && input < 50:
+            case input > "21" && input <= 40:
                 console.log("Take Beer");
+                break;
+            case input >= 41 && input <=50 :
+                console.log("Take Whiskey");
                 break;
             case input > 51:
                 console.log("Take Medicine");

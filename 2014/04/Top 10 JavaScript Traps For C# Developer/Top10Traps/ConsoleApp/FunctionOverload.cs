@@ -14,7 +14,6 @@ namespace ConsoleApp
             Console.WriteLine("10 + 20 + 30 = " + Add(10, 20, 30));
             Console.ReadLine();
         }
-
         static int Add(int number1, int number2)
         {
             return number1 + number2;

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="author" content="Prasad Honrao" />
+    <meta name="description" content="JavaScript Boolean type" />
+    <meta name="keywords" content="JavaScript, Types, boolean" />
+    <meta charset="utf-8" />
+    <title>JavaScript Boolean type</title>
+    <script type="text/javascript">
+        function write(message) {
+            document.getElementById('message').innerHTML += message + '</br>';
+        }
+    </script>
+</head>
+<body>
+    <p id="message">
+        <script type="text/javascript">
+            var isActive = true;
+            write("Value : " + isActive + " Type : " + typeof (isActive));
+
+            isActive = false;
+            write("Value : " + isActive + " Type : " + typeof (isActive));
+
+            isActive = 'false';
+            write("Value : " + isActive + " Type : " + typeof (isActive));
+
+
+            var flag = "startLoop";
+            if (flag) {
+                write("String value is a true condition");
+            }
+            else {
+                write("String value is a false condition");
+            }
+
+            flag = "";
+            if (flag) {
+                write("Empty string is a true condition");
+            }
+            else {
+                write("Empty string is a false condition");
+            }
+
+            flag = 100;
+            if (flag) {
+                write("Number value is a true condition");
+            }
+            else {
+                write("Number value is a false condition");
+            }
+
+            flag = null;
+            if (flag) {
+                write("Null value is a true condition");
+            }
+            else {
+                write("Null value is a false condition");
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript variables demo</title>
+    <script type="text/javascript">
+        function write(message) {
+            document.getElementById('message').innerHTML += message + '</br>';
+        }
+    </script>
+</head>
+<body>
+    <p id="message">
+        <script type="text/javascript">
+            var jsVariable;
+            write("Value : " + jsVariable + " Type  : " + typeof(jsVariable));
+
+            jsVariable = "JavaScript is powerful language";
+            write("Value : " + jsVariable + " Type  : " + typeof (jsVariable));
+
+            jsVariable = 10.99;
+            write("Value : " + jsVariable + " Type  : " + typeof (jsVariable));
+
+            jsVariable = true;
+            write("Value : " + jsVariable + " Type  : " + typeof (jsVariable));
+        </script>
+</body>
+</html>

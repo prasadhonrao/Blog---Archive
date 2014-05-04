@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="author" content="Prasad Honrao" />
+    <meta name="description" content="JavaScript Object type" />
+    <meta name="keywords" content="JavaScript, Types, Object" />
+    <meta charset="utf-8" />
+    <title>JavaScript Object type</title>
+    <script type="text/javascript">
+        function write(message) {
+            document.getElementById('message').innerHTML += message + '</br>';
+        }
+    </script>
+</head>
+<body>
+    <p id="message">
+        <script type="text/javascript">
+            var b = new Boolean();
+            alert(typeof (b));
+            b = "p";
+            alert(typeof (b));
+
+            var n = new Number();
+            alert(typeof (n));
+            n = 100;
+            alert(typeof (n));
+
+            var s = new String();
+            alert(typeof (s));
+            s = "JavaScript";
+            alert(typeof (s));
+
+            var d = new Date();
+            alert(typeof (d));
+
+            var a = new Array();
+            alert(typeof (a));
+            
+            //Empty object
+            var emptyObject = {};
+            write(emptyObject);
+
+            // Object with single property
+            var object1 = { name: 'Prasad' };
+            write(object1.name);
+
+            //Object with multiple properties
+            var object2 = { name: 'Prasad', Age: '30' };
+            write(object2.name);
+            write(object2.Age);
+
+            //Using Object constructor
+            var object3 = new Object();
+            object3.Name = 'JavaScript';
+            write(object3.Name);
+
+            //Object with single property and single function
+            var object4 = {
+                name: "Prasad",
+                Greet: function (userName) {
+                    write("Hello " + userName);
+                }
+            }
+            write(object4.name);
+            object4.Greet("Prasad");
+
+            //Nested objects
+            var customer = {
+                firstName: "Prasad",
+                lastName: "Honrao",
+                address: {
+                    street: "Dorset street",
+                    postcode: "G37AG"
+                },
+                "telephone number": "1234567890",  // note property name can contain space but needs to be enclosed in ""
+                colors: [  // adding array as a property
+                {id: 1, name: "Red" },
+                { id: 2, name: "Blue" }
+                ]
+            };
+            write(customer.address.street);
+            write(customer["address"]["postcode"]);
+            write(customer["telephone number"]); // cant use customer."telephone number"
+            write(customer.colors[0].name);
+
+            // Dynamic properties and methods
+            var newCustomer = {
+                firstName: "Colin"
+            };
+
+            // adding new property dynamically
+            newCustomer.lastName = "Gray"; 
+            newCustomer.phone = "0123456789"; 
+
+            // adding function dynamically
+            newCustomer.call = function () { 
+                var toCall = this.phone;
+                alert("Customer called");
+            };
+
+            write(newCustomer.firstName + " " + newCustomer.lastName + " " + newCustomer.phone);
+            newCustomer.call();
+        </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="author" content="Prasad Honrao" />
+    <meta name="description" content="JavaScript string type" />
+    <meta name="keywords" content="JavaScript, Types, string" />
+    <meta charset="utf-8" />
+    <title>JavaScript string type</title>
+    <script type="text/javascript">
+        function write(message) {
+            document.getElementById('message').innerHTML += message + '</br>';
+        }
+    </script>
+</head>
+<body>
+    <p id="message">
+        <script type="text/javascript">
+
+            var language = "JavaScript";
+            var authorName = "PrasadHonrao";
+
+            // Declaration using double quote
+            language = "JavaScript";
+            write(language);
+
+            // Declaration using single quote
+            language = 'JavaScript';
+            write(language);
+
+            // Add single quote inside a string
+            language = "'JavaScript'";
+            write(language);
+
+            // Add double quote inside a string
+            language = '"JavaScript"';
+            write(language);
+
+            // Add single quote inside a string using escape sequence
+            language = 'Java \' Script';
+            write(language);
+
+            // add unicode character
+            var copyright = 'Copyright symbol \u00a9';
+            write(copyright);
+
+            // string concatenation
+            var authorfullName = "Prasad" + "Honrao";
+            write(authorfullName);
+
+            //charAt(index)
+            write("6th character in string JavaScript is " + (language).charAt(6)); 
+
+            // indexOf(string)
+            language = "JavaScript";
+            write("Index of 'S' in JavaScript is :" + language.indexOf('S'));
+
+            // replace(from,to)
+            language = 'JavaScript';
+            var newLanguage = language.replace('Java', 'Type');
+            write(newLanguage);
+
+            //slice - returns a substring of a string
+            var letters = "JavaScript";
+            write(letters.slice(4, 9));
+
+            //split(separator)
+            var sentence = "JavaScript looks really promising language";
+            var words = sentence.split(" ");
+            for (i = 0; i < words.length; i++) {
+                write(words[i]);
+            }
+
+            // case
+            write("JavaScript".toUpperCase());
+            write("JavaScript".toLowerCase());
+
+        </script>
+</body>
+</html>

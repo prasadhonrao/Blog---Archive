@@ -14,9 +14,9 @@ namespace ConsoleApp
             var secondNumber = "10";
 
             // Below statements will result into compile time error
-            //if (firstNumber == secondNumber) { }
-            //while (1) {}
-            //while (0) {}
+            if (firstNumber == secondNumber) { }
+            while (1) { }
+            while (0) { }
 
             // Converting number to string and then typecast to bool
             var equalNumber = ((bool)(firstNumber.ToString() == secondNumber));
