@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript truthy and falsy values</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        // 0, false, '', undefined, null, NaN are falsy values in JS. All other value are truthy
+
+        var x = 0;
+        if (!x) {
+            console.log("0 is falsy");
+        }
+
+        x = false;
+        if (!x) {
+            console.log("false is falsy");
+        }
+
+        x = '';
+        if (!x) {
+            console.log("'' is falsy");
+        }
+
+        if (!undefined) {
+            console.log('undefined is falsy');
+        }
+
+        x = null;
+        if (!x) {
+            console.log('null is falsy');
+        }
+
+        x = 0 / 0;
+        if (!x) {
+            console.log('NaN is falsy');
+        }
+
+        // TRUTHY
+
+        x = 1 / 0;
+        if (x) {
+            console.log('Infinity is truthy');
+        }
+
+        x = ' '; // truthy
+        if (x) {
+            console.log("' ' is truthy");
+        }
+        else {
+            console.log("' ' is falsy");
+        }
+
+
+    </script>
+</body>
+</html>

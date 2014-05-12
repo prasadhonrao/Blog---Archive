@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript variable and function hoisting</title>
+    <script type="text/javascript">
+
+        //Variable Hoisting 
+        function doSomething() {
+            console.log(someVariable); //undefined
+
+            var someVariable = 100;
+            console.log(someVariable); // 100
+
+            if (true) {
+                someVariable = 200;
+                console.log(someVariable); // 100
+            }
+
+        }
+        doSomething();
+
+
+        // Function Hoisting
+        try {
+            printOne();
+            printTwo();
+
+        } catch (e) {
+            console.log(e.message);
+        }
+
+        // Function Expression
+        var printOne = function () {
+            console.log("One");
+        }
+
+        // Function Statement
+        function printTwo() {
+            console.log("Two");
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
