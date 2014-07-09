@@ -46,11 +46,11 @@
         var cust = {
             Id: 1,
             Name: "Prasad",
-            Age : 35,
-            GetNameAndAge: function () {
+            Age: 35,
+            GetNameAndAge: function() {
                 return this.Name + ' ' + this.Age;
             }
-        }
+        };
         console.log(cust.GetNameAndAge()); // this is set to cust object
 
 
@@ -58,9 +58,9 @@
         function Customer(name, age) {
             this.Name = name;
             this.Age = age;
-            this.PrintCustomer = function () {
+            this.PrintCustomer = function() {
                 console.log(this.Name);
-            }
+            };
         }
 
         var c = new Customer('Colin', 40);
