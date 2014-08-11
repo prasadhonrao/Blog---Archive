@@ -11,7 +11,7 @@ var print = function (input) {
 
 print(10);
 
-print = function (input) {
+var print = function (input) {
     console.log("Redefining print with value " + input);
 }
 
