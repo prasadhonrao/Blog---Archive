@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Infinite Scrolling</title>
+</head>
+<body>
+
+    <div ng-app='myApp' ng-controller='numbersController'>
+        <div infinite-scroll='loadMore()' infinite-scroll-distance='2'>
+            <img ng-repeat='n in numbers | limitTo:limit' ng-src='http://placehold.it/150x150&text={{n}}'>
+        </div>
+    </div>
+
+    <script src='lib/jquery-2.1.1.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src='lib/ng-infinite-scroll.min.js'></script>
+    <script src="app.js"></script>
+</body>
+</html>
