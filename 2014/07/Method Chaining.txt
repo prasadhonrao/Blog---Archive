@@ -1,0 +1,134 @@
+One of the most commonly used and useful design pattern in programming language is Method Chaining. As the name suggests, it allows you to chain / call multiple functions on the same object consecutively, without any need to specify object name during each method call. This pattern is heavily used in JavaScript libraries like jQuery, AngularJS and in Language Integrated Query [LINQ] feature of C#. 
+
+In the first part of this article, we will cover how this pattern is implemented in jQuery and C# LINQ. The code snippet presented in the article will help you to understand how this pattern improves code readability. In the second part, we will dive into more detail and implement the pattern from scratch using C# and JavaScript. 
+
+<h2>jQuery - Without Method Chaining</h2>
+In below code snippet, first we are identifying DOM element <code>outputDiv</code> using jQuery Id selector syntax. Next, we are setting up values for background, height and width properties of the identified DOM element. Last code line animates the DOM element using the <code>fadeIn</code> method for 200 milliseconds. Take a note that, we have to repeat DOM element name <code>$div</code> each time while setting up the property or calling <code>fadeIn</code> method.
+
+<pre class="prettyprint linenums">
+var $div = $('#outputDiv');      
+$div.css('background', 'blue');  
+$div.height(100);     
+$div.width(100);                           
+$div.fadeIn(200);                
+</pre>
+
+<h2>jQuery - With Method Chaining</h2>
+Let's modify the code snippet discussed above and implement it using method chaining pattern. Since most of the functions in jQuery implemented to support method chaining, it makes it really easy to refactor five lines of code described above into a single line.
+<pre class="prettyprint linenums">
+$('#outputDiv').css('background', 'blue').height(100).width(100).fadeIn(200);
+</pre>
+
+However, it's a common practice in jQuery to provide method name on a separate line as shown in below code snippet to provide more code readability. Note that, we dont have to assign the value of <code>outputDiv</code> DOM element to any variable and repeat its name for each property setter or during method call.
+<pre class="prettyprint linenums">
+$('#outputDiv')
+  .css('background', 'blue')
+  .height(100)
+  .width(100)
+  .fadeIn(200);
+</pre>
+
+Even in this trivial example, we managed to reduce number of code lines and improved readability, which is really good.
+
+<h2>C# - LINQ</h2>
+<a href="http://msdn.microsoft.com/en-us/library/bb397933.aspx" title="C# LINQ" target="_blank">LINQ</a> has simplified C# development to a great extent. If you're not familiar with it, stop reading, find useful articles about it on Web and then come back. It's that cool!
+
+In this article we will just focus on method chaining pattern implementation in C#. Code snippet shown below gets the list of running processes on user machine using <code>Process.GetProcesses()</code> code statement. The <code>Where</code> clause / function filters the retrieved processes [from step 1] and returns only the processes which has more than 5 threads. The <code>OrderBy</code> function sorts the processes by their name and <code>Select</code> function returns the processes name. 
+
+Again, point to note that, we are not using any variable to store the running processes and then using it to filter and sort the data, rather we are using method chaining pattern to simply call the next method in the chain on previoud method's return value.
+<pre class="prettyprint linenums">
+var query = Process.GetProcesses()
+                   .Where(p => p.Threads.Count > 5)
+                   .OrderBy(p => p.ProcessName)
+                   .Select(p => p.ProcessName);
+
+foreach (var process in query)
+{
+    Console.WriteLine("{0}", process);
+}
+</pre>
+
+Okay, now we have fair understanding of the pattern, lets implement it using C# and JavaScript.
+
+<h2>Method Chaining Pattern Implementation using C#</h2>
+The <code>Person</code> class defined below contains three properties viz Name, Age and City. Though its not absolutely necessary in this example to specify <code>private</code> access specifier on these properties, I have set it so that the property value can be set using declared methods <code>SetName</code>, <code>SetAge</code> and <code>SetCity</code>. The most important part of these functions, after setting the property value, they are returning <code>Person</code> object using <code>this</code>, which allows us to chain the methods.
+<pre class="prettyprint linenums">
+class Person
+{
+    public string Name { get; private set; }
+    public int Age { get; private set; }
+    public string City { get; private set; }
+
+    public Person SetName(string name)
+    {
+        this.Name = name;
+        return this;
+    }
+
+    public Person SetAge(int age)
+    {
+        this.Age = age;
+        return this;
+    }
+
+    public Person SetCity(string city)
+    {
+        this.City = city;
+        return this;
+    }
+
+    public void Save()
+    {
+        Console.WriteLine("Saving Person [Name: {0}, Age: {1}, City: {2}]...", this.Name, this.Age, this.City);
+    }
+}
+</pre>
+
+Once you declare class in this way, yo ucan instantiate it and use method chaining as shown in below code example
+<pre class="prettyprint linenums">
+new Person().SetName("Prasad Honrao")
+            .SetAge(35)
+            .SetCity("Pune")
+            .Save();
+
+</pre>
+
+<h2>Method Chaining Pattern Implementation using JavaScript</h2>
+JavaScript implements method chaining pattern is the same way as C# or vice versa :).
+<pre class="prettyprint linenums">
+var Person = function() {
+	this.name = "";
+	this.age = 0;
+	this.city = "";
+
+	this.setName = function(name){
+		this.name = name;
+		return this;
+	};
+
+	this.setAge = function(age){
+		this.age = age;
+		return this;
+	};
+
+	this.setCity = function(city) {
+		this.city = city;
+		return this;
+	};
+
+	this.save = function() {
+		console.log("Saving Person [" + "Name : " + this.name + ", Age : " + this.age + ", City : " + this.city + "]...");
+		return this;
+	};
+};
+</pre>
+<pre class="prettyprint linenums">
+new Person().setName("Colin")
+ 	 		.setAge(35)
+     		.setCity("London")
+     		.save();
+</pre>
+<h2>Summary</h2>
+
+<h2>External References</h2>
+http://en.wikipedia.org/wiki/Method_chaining
