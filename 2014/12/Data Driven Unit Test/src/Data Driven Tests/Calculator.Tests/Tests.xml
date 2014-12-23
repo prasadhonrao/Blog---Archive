@@ -1,0 +1,22 @@
+﻿<tests>
+  <add>
+    <firstNumber>10</firstNumber>
+    <secondNumber>100</secondNumber>
+    <expected>110</expected>
+  </add>
+  <add>
+    <firstNumber>100</firstNumber>
+    <secondNumber>1000</secondNumber>
+    <expected>1100</expected>
+  </add>
+  <add>
+    <firstNumber>3</firstNumber>
+    <secondNumber>4</secondNumber>
+    <expected>7</expected>
+  </add>
+  <add>
+    <firstNumber>0</firstNumber>
+    <secondNumber>0</secondNumber>
+    <expected>0</expected>
+  </add>
+</tests>
